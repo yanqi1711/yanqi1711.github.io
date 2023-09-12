@@ -1,0 +1,412 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><!-- hexo injector head_begin start --><script>
+                (() => {
+                    const sw = navigator.serviceWorker
+                    const error = () => {console.error('注册 sw 时发生错误，很可能是由于您的浏览器不支持 sw')}
+                    if (!sw?.register('/sw.js')?.then(() => {
+                        if (!sw.controller) location.reload()
+                    })?.catch(error)) error()
+                })()
+            </script><!-- hexo injector head_begin end --><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>雪天困不住的大孩子</title><meta name="author" content="yanqi"><meta name="copyright" content="yanqi"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="梦想去做一名全栈工程师">
+<meta property="og:type" content="website">
+<meta property="og:title" content="雪天困不住的大孩子">
+<meta property="og:url" content="https://sonna.cn/page/2/index.html">
+<meta property="og:site_name" content="雪天困不住的大孩子">
+<meta property="og:description" content="梦想去做一名全栈工程师">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://npm.elemecdn.com/yanqi1711-picx@1.0.11/img/me.webp">
+<meta property="article:author" content="yanqi">
+<meta property="article:tag" content="全栈">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://npm.elemecdn.com/yanqi1711-picx@1.0.11/img/me.webp"><link rel="shortcut icon" href="https://npm.elemecdn.com/yanqi1711-picx/img/kun.webp"><link rel="canonical" href="https://sonna.cn/page/2/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://npm.elemecdn.com/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/@fancyapps/ui/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: {"appId":"0ZPAR0UJ1S","apiKey":"10c27644e12d4d4d8597754fb959371e","indexName":"hexo","hits":{"per_page":10},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://npm.elemecdn.com/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://npm.elemecdn.com/flickr-justified-gallery/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '雪天困不住的大孩子',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-09-12 03:46:11'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2"></head><body><!-- hexo injector body_begin start --><script src="/sw-dom.js"></script><!-- hexo injector body_begin end --><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><div class="loading-img"></div><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+document.addEventListener('pjax:send', () => {
+  Pace.restart()
+})
+</script><link rel="stylesheet" href="/css/progress_bar.css"/><script src="https://npm.elemecdn.com/pace-js/pace.min.js"></script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/yanqi1711-picx@1.0.11/img/me.webp" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">26</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">25</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-top-img fixed" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="雪天困不住的大孩子"><span class="site-name">雪天困不住的大孩子</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/2022/05/09/%E5%BC%95%E5%85%A5Aplayer%E6%92%AD%E6%94%BE%E9%9F%B3%E4%B9%90/" title="引入Aplayer播放音乐"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/yanqi1711-picx@1.0.11/img/204.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="引入Aplayer播放音乐"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/05/09/%E5%BC%95%E5%85%A5Aplayer%E6%92%AD%E6%94%BE%E9%9F%B3%E4%B9%90/" title="引入Aplayer播放音乐">引入Aplayer播放音乐</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-05-09T08:57:16.000Z" title="发表于 2022-05-09 08:57:16">2022-05-09</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/blog/">blog</a></span></div><div class="content">博客参考教程https://akilar.top/posts/3afa069a/
+https://yyyzyyyz.cn/posts/2d51c9bd3490/
+可以直接去看
+步骤
+在博客根目录[Blogroot]下打开终端，运行以下指令安装hexo-tag-aplayer插件
+
+1npm install hexo-tag-aplayer --save
+
+
+在站点配置文件[Blogroot]\_config.yml中新增配置项，建议直接加在最底下
+
+12345# APlayer# https://github.com/MoePlayer/hexo-tag-aplayer/blob/master/docs/README-zh_cn.mdaplayer:meting: trueasset_inject: false
+
+
+修改主题配置文件[Blogroot]\_config.butterfly.yml中关于Aplayer的配置内容
+
+1234# Inject the css and script (aplayer/meting)aplayerInject:enable: trueper_pa ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2022/04/26/JS%E7%AC%94%E8%AE%B0/" title="JS笔记"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/yanqi1711-picx/20220423/102.127nnaabhexs.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JS笔记"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/04/26/JS%E7%AC%94%E8%AE%B0/" title="JS笔记">JS笔记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-04-26T08:57:16.000Z" title="发表于 2022-04-26 08:57:16">2022-04-26</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%9F%A5%E8%AF%86/">知识</a></span></div><div class="content">什么是JavaScript概述JavaScript是一门世界上最流行的脚本语言
+一个合格的后端人员，必须要精通JavaScript 
+
+历史JavaScript 的发展历史
+ECMAScript 它可以理解为是JavaScript 的一个标准
+
+最新版本已经到es6版本
+但是大部分浏览器还只是停留到es5上
+开发环境到线上环境，版本不一致
+
+快速入门引入JavaScript内部标签外部引入123&lt;script&gt;	//...&lt;/script&gt;abs.js
+1//...
+
+test.html
+1&lt;script src=&quot;js/yq.js&quot;&gt;&lt;/script&gt;
+
+
+基本语法入门123456789101112131415&lt;!--JavaScript严格区分大小写--&gt;&lt;script&gt;    // 1.定义变量  变量类型 变量名 = 变量值;    var scroe = 17;    var name = &quot;qinjiang&quot;;    // 2.条件控制    if (2&gt;1 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2022/03/20/%E7%BE%8E%E5%8C%96windows%E7%BB%88%E7%AB%AF/" title="美化windows终端"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/yanqi1711-picx/20220423/020.1v6op4h7ss2o.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="美化windows终端"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/03/20/%E7%BE%8E%E5%8C%96windows%E7%BB%88%E7%AB%AF/" title="美化windows终端">美化windows终端</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-03-20T08:57:16.000Z" title="发表于 2022-03-20 08:57:16">2022-03-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a></span></div><div class="content">序言：效果展示
+终端是程序员日常会使用到的工具。
+windows的cmd可以用，但界面也不美观，让人没有欲望使用
+所以我就找到了 Windows Terminal 这一软件，可以管理使用多个shell
+利用自带的设置就可以轻松美化界面
+而且我还会教程PowerShell Core，以及oh-my-posh美化插件，(没错是不是和mac上的zsh有点相似)
+
+步骤1：下载 &amp; 安装Windows Terminal
+
+必须运行 Windows 1903 (build&gt;= 10.0.18362.0) 或更高版本才能运行 Windows 终端
+
+首先需要解决的是你的系统环境问题。如果你有经常升级系统的话，这个问题就不会给你造成影响。如果你的 Windows 版本不够的话，可以使用 windows 易升进行升级，这里不进行赘述。打开你的 windows 应用商店（Microsoft Store）搜索 Windows Terminal 进行下载 &amp; 安装。
+安装完成后，在”C:\Program Files\WindowsApps\Microsoft.WindowsTermin ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2021/12/30/UDP%E5%A4%9A%E7%BA%BF%E7%A8%8B%E8%81%8A%E5%A4%A9/" title="UDP多线程聊天"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/yanqi1711-picx/20220423/051.75ob5vj0gfw0.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="UDP多线程聊天"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/12/30/UDP%E5%A4%9A%E7%BA%BF%E7%A8%8B%E8%81%8A%E5%A4%A9/" title="UDP多线程聊天">UDP多线程聊天</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-12-30T07:58:14.000Z" title="发表于 2021-12-30 07:58:14">2021-12-30</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a></span></div><div class="content">代码部分主机一代码：
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677import javax.swing.*;import java.awt.*;import java.awt.event.ActionEvent;import java.awt.event.ActionListener;import java.net.DatagramPacket;import java.net.DatagramSocket;import java.net.InetAddress;public class Udp01 &#123;    public static void main(String[] args) &#123;        new A() ;    &#125;&#125;class A extends JFrame implements Run ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2021/12/01/%E5%8D%95%E7%89%87%E6%9C%BA%E8%AF%BE%E8%AE%BE/" title="单片机课设"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/yanqi1711-picx/20220423/19F338379F87E3A21ABDC6671A5078C4.35nsb6uf7z20.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="单片机课设"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/12/01/%E5%8D%95%E7%89%87%E6%9C%BA%E8%AF%BE%E8%AE%BE/" title="单片机课设">单片机课设</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-12-01T11:57:16.000Z" title="发表于 2021-12-01 11:57:16">2021-12-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a></span></div><div class="content">题目：制作LED数码管显示的秒表，计时范围0.1~9.9s.
+代码123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778	ORG   0000H    LJMP  MAIN    ORG   000BH    ;T0中断入口    LJMP  T0_INTMAIN:                  ;初始化    MOV   DPTR, #TAB    ;将TAB所代表的地址送入DPTR	MOV   TMOD, #01H    ;设置T0为方式1计时    MOV   IE, #82H    ;打开EA和ET0（外部中断0）    MOV   R2, #1LP1:    MOV   R3, #2    MOV   R4, #10    MOV   R5, #10LP2:CLR   TR0    ;计数运行控制位M_LOOP:       CALL  ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2021/08/09/Java%E4%B9%A6%E7%B1%8D%E8%B5%84%E6%BA%90/" title="Java书籍资源"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/yanqi1711-picx/20220423/075.5id7sqq6rxs0.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java书籍资源"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/08/09/Java%E4%B9%A6%E7%B1%8D%E8%B5%84%E6%BA%90/" title="Java书籍资源">Java书籍资源</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-09T15:57:16.000Z" title="发表于 2021-08-09 15:57:16">2021-08-09</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E4%B9%A6/">书</a></span></div><div class="content">
+Java编程思想第四版PDF
+提取码：0000
+
+
+这里是一些计算机类的书籍，想研究，想学习，都不会晚的！
+链接：计算机黑皮书提取码：0000
+
+</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2021/07/08/python%E8%AF%BE%E8%AE%BE/" title="python课设"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/yanqi1711-picx/20220423/081.mjr4jhrt5q8.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="python课设"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/07/08/python%E8%AF%BE%E8%AE%BE/" title="python课设">python课设</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-07-08T15:57:16.000Z" title="发表于 2021-07-08 15:57:16">2021-07-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a></span></div><div class="content">代码123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137138139140141142143144145146147148149150151152153154155156157158159160161162163164165166167168169170171172173174175176177178179180181182183184185186187188189190191192193194195196197198199200201202 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2021/06/10/DML/" title="DML"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/yanqi1711-picx/20220423/082.391vqs7d7h40.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="DML"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/06/10/DML/" title="DML">DML</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-06-10T09:52:37.000Z" title="发表于 2021-06-10 09:52:37">2021-06-10</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%9F%A5%E8%AF%86/">知识</a></span></div><div class="content">SELECT语句主句1select 字段列表 from 表名
+
+
+字段列表：表中字段
+
+
+多个字段之间用逗号分隔
+
+所有字段可用通配符”*”表示
+
+“字段名 AS 别名”替换列表标题
+
+字段名前面加限制
+
+
+DISTINCT：相同字段值只显示一条记录1select distinct Academy from Course
+
+
+TOP n |m PERCENT ：前n条或前m%条记录12select top 3 * from Course-- 查询Course表中前3门课程
+
+12select top 20 percent * from Course-- 查询Course中前20%记录
+
+例：
+123select StudentCode, CourseCode, Grade+2 as 成绩, &#x27;情况属实&#x27; as 说明from Grade-- 查询Grade表，将成绩加2分显示，并增加一列情况属实
+
+
+可新增字段（常量、表达式）
+
+
+函数名
+函数功能
+
+
+
+AVG
+计算某一字段的平均值
+
+
+COUNT
+统计某一字段的个数
+
+
+MAX
+查找某一字段的最大值
+
+
+MIN
+查 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2021/06/07/NNs/" title="神经网络基础知识"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/yanqi1711-picx/20220423/028.1qvsvm8ksri8.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="神经网络基础知识"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/06/07/NNs/" title="神经网络基础知识">神经网络基础知识</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-06-07T08:57:16.000Z" title="发表于 2021-06-07 08:57:16">2021-06-07</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%9F%A5%E8%AF%86/">知识</a></span></div><div class="content">神经元的数学模型神经网络由基本的神经元组成，图NeuranCell 就是一个神经元的数学/计算模型。
+
+图NeuranCell 神经元计算模型
+
+输入 input$(x_1,x_2,x_3)$ 是外界输入信号，一般是一个训练数据样本的多个属性。
+权重 weights$(w_1,w_2,w_3)$ 是每个输入信号的权重值，以上面的 $(x_1,x_2,x_3)$ 的例子来说，$x_1$ 的权重可能是 $0.92$，$x_2$ 的权重可能是 $0.2$，$x_3$ 的权重可能是 $0.03$。当然权重值相加之后可以不是 $1$。
+偏移 bias还有个 $b$ 是怎么来的？一般的书或者博客上会告诉你那是因为 $y=wx+b$，$b$ 是偏移值，使得直线能够沿 $Y$ 轴上下移动。这是用结果来解释原因，并非 $b$ 存在的真实原因。从生物学上解释，在脑神经细胞中，一定是输入信号的电平/电流大于某个临界值时，神经元细胞才会处于兴奋状态，这个 $b$ 实际就是那个临界值。亦即当：
+$$w_1 \cdot x_1 + w_2 \cdot x_2 + w_3 \cdot x_3 \geq t$$
+时， ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2021/05/28/DDL/" title="DDL"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/yanqi1711-picx/20220423/077.3vqfz49gxc60.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="DDL"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/05/28/DDL/" title="DDL">DDL</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-05-28T09:52:37.000Z" title="发表于 2021-05-28 09:52:37">2021-05-28</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%9F%A5%E8%AF%86/">知识</a></span></div><div class="content">创建数据库12create database 数据库名[on name = 逻辑文件名, filename = 物理文件名]
+
+例：
+12create database School--在默认位置创建School数据库
+
+123create database Schoolon(name=&#x27;School&#x27;, filename=&#x27;D:\School.MDF&#x27;)/*在D:\创建School数据库。主数据文件逻辑名为School，主数据物理名文件为D:\School.MDF，日志文件D:\School_log.LDF */
+
+
+
+使用、删除数据库12use School--指定数据库School为当前数据库
+
+12drop database School--删除School
+
+
+
+创建数据表1234567891011121314151617create table Student(StudentCode char(8) not null unique, /*学号不允许空，取值唯一*/ StudentName varchar(16) not null, S ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#content-inner">3</a><a class="extend next" rel="next" href="/page/3/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/yanqi1711-picx@1.0.11/img/me.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">yanqi</div><div class="author-info__description">梦想去做一名全栈工程师</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">26</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">25</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/yanqi17118357"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">人活在世上不就是为了樱岛麻衣吗？</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/09/12/%E6%8C%82%E8%BD%BDmmcblk1%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA/" title="挂载mmcblk1磁盘分区"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/09/12/m4lSkpJeV18jMhy.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="挂载mmcblk1磁盘分区"/></a><div class="content"><a class="title" href="/2023/09/12/%E6%8C%82%E8%BD%BDmmcblk1%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA/" title="挂载mmcblk1磁盘分区">挂载mmcblk1磁盘分区</a><time datetime="2023-09-12T10:57:16.000Z" title="发表于 2023-09-12 10:57:16">2023-09-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/13/Java%E5%9F%BA%E7%A1%80%E5%AE%B9%E5%99%A8/" title="Java基础容器"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/yanqi1711-picx/img/244.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java基础容器"/></a><div class="content"><a class="title" href="/2022/07/13/Java%E5%9F%BA%E7%A1%80%E5%AE%B9%E5%99%A8/" title="Java基础容器">Java基础容器</a><time datetime="2022-07-13T00:46:14.000Z" title="发表于 2022-07-13 00:46:14">2022-07-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/05/Spring5%E6%A1%86%E6%9E%B6/" title="Spring5"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/yanqi1711-picx/img/234.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Spring5"/></a><div class="content"><a class="title" href="/2022/07/05/Spring5%E6%A1%86%E6%9E%B6/" title="Spring5">Spring5</a><time datetime="2022-07-05T08:57:16.000Z" title="发表于 2022-07-05 08:57:16">2022-07-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/04/CycleGAN/" title="图片场景转换-基于CycleGAN"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/yanqi1711-picx/img/206.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="图片场景转换-基于CycleGAN"/></a><div class="content"><a class="title" href="/2022/07/04/CycleGAN/" title="图片场景转换-基于CycleGAN">图片场景转换-基于CycleGAN</a><time datetime="2022-07-04T08:57:16.000Z" title="发表于 2022-07-04 08:57:16">2022-07-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/06/20/%E7%A7%8D%E6%A0%91%E7%9A%84%E7%94%B7%E4%BA%BA/" title="种树的男人"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/yanqi1711-picx/pic/1.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="种树的男人"/></a><div class="content"><a class="title" href="/2022/06/20/%E7%A7%8D%E6%A0%91%E7%9A%84%E7%94%B7%E4%BA%BA/" title="种树的男人">种树的男人</a><time datetime="2022-06-20T08:57:16.000Z" title="发表于 2022-06-20 08:57:16">2022-06-20</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/blog/"><span class="card-category-list-name">blog</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%B9%A6/"><span class="card-category-list-name">书</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%BA%BA%E7%94%9F%E5%92%8C%E7%A4%BE%E4%BC%9A%E7%9A%84%E5%A4%A7%E6%80%9D%E8%80%83/"><span class="card-category-list-name">人生和社会的大思考</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%8A%80%E6%9C%AF/"><span class="card-category-list-name">技术</span><span class="card-category-list-count">6</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%9F%A5%E8%AF%86/"><span class="card-category-list-name">知识</span><span class="card-category-list-count">13</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%A7%86%E9%A2%91/"><span class="card-category-list-name">视频</span><span class="card-category-list-count">1</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/JavaScript/" style="font-size: 1.1em; color: #999">JavaScript</a> <a href="/tags/Butterfly/" style="font-size: 1.23em; color: #999ea6">Butterfly</a> <a href="/tags/AI/" style="font-size: 1.1em; color: #999">AI</a> <a href="/tags/Spring%E7%AC%94%E8%AE%B0/" style="font-size: 1.1em; color: #999">Spring笔记</a> <a href="/tags/SQL/" style="font-size: 1.37em; color: #99a4b2">SQL</a> <a href="/tags/GAN/" style="font-size: 1.1em; color: #999">GAN</a> <a href="/tags/%E6%83%85%E7%BB%AA/" style="font-size: 1.1em; color: #999">情绪</a> <a href="/tags/PowerShell/" style="font-size: 1.1em; color: #999">PowerShell</a> <a href="/tags/Spring/" style="font-size: 1.1em; color: #999">Spring</a> <a href="/tags/MarkDown/" style="font-size: 1.1em; color: #999">MarkDown</a> <a href="/tags/Java%E7%AC%94%E8%AE%B0/" style="font-size: 1.5em; color: #99a9bf">Java笔记</a> <a href="/tags/%E7%BE%8E%E5%8C%96/" style="font-size: 1.1em; color: #999">美化</a> <a href="/tags/aplayer/" style="font-size: 1.1em; color: #999">aplayer</a> <a href="/tags/Java/" style="font-size: 1.5em; color: #99a9bf">Java</a> <a href="/tags/python/" style="font-size: 1.37em; color: #99a4b2">python</a> <a href="/tags/windows/" style="font-size: 1.1em; color: #999">windows</a> <a href="/tags/CycleGAN/" style="font-size: 1.1em; color: #999">CycleGAN</a> <a href="/tags/%E6%B1%87%E7%BC%96/" style="font-size: 1.1em; color: #999">汇编</a> <a href="/tags/JSDelivr/" style="font-size: 1.1em; color: #999">JSDelivr</a> <a href="/tags/Hexo/" style="font-size: 1.23em; color: #999ea6">Hexo</a> <a href="/tags/Linux/" style="font-size: 1.1em; color: #999">Linux</a> <a href="/tags/%E7%BB%88%E7%AB%AF/" style="font-size: 1.1em; color: #999">终端</a> <a href="/tags/%E6%84%8F%E4%B9%89/" style="font-size: 1.1em; color: #999">意义</a> <a href="/tags/%E6%AD%8C/" style="font-size: 1.1em; color: #999">歌</a> <a href="/tags/%E7%97%95%E8%BF%B9/" style="font-size: 1.37em; color: #99a4b2">痕迹</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/09/"><span class="card-archive-list-date">九月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/07/"><span class="card-archive-list-date">七月 2022</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/06/"><span class="card-archive-list-date">六月 2022</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/05/"><span class="card-archive-list-date">五月 2022</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/04/"><span class="card-archive-list-date">四月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/03/"><span class="card-archive-list-date">三月 2022</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/12/"><span class="card-archive-list-date">十二月 2021</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/08/"><span class="card-archive-list-date">八月 2021</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">26</div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-09-12T03:46:11.331Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2023 By yanqi</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://npm.elemecdn.com/@fancyapps/ui/dist/fancybox/fancybox.umd.js"></script><script src="https://npm.elemecdn.com/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://npm.elemecdn.com/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://npm.elemecdn.com/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (true){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"></div><div class="aplayer no-destroy" data-id="7426255953" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="false" muted></div><link rel="stylesheet" href="https://npm.elemecdn.com/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://npm.elemecdn.com/aplayer/dist/APlayer.min.js"></script><script src="https://npm.elemecdn.com/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script src="https://npm.elemecdn.com/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div><script src="https://npm.elemecdn.com/algoliasearch/dist/algoliasearch-lite.umd.js"></script><script src="https://npm.elemecdn.com/instantsearch.js/dist/instantsearch.production.min.js"></script><script src="/js/search/algolia.js"></script></div></div></body></html>

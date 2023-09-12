@@ -1,0 +1,333 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><!-- hexo injector head_begin start --><script>
+                (() => {
+                    const sw = navigator.serviceWorker
+                    const error = () => {console.error('注册 sw 时发生错误，很可能是由于您的浏览器不支持 sw')}
+                    if (!sw?.register('/sw.js')?.then(() => {
+                        if (!sw.controller) location.reload()
+                    })?.catch(error)) error()
+                })()
+            </script><!-- hexo injector head_begin end --><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>美化windows终端 | 雪天困不住的大孩子</title><meta name="author" content="yanqi"><meta name="copyright" content="yanqi"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="序言：效果展示 终端是程序员日常会使用到的工具。 windows的cmd可以用，但界面也不美观，让人没有欲望使用 所以我就找到了 Windows Terminal 这一软件，可以管理使用多个shell 利用自带的设置就可以轻松美化界面 而且我还会教程PowerShell Core，以及oh-my-posh美化插件，(没错是不是和mac上的zsh有点相似)  步骤1：下载 &amp; 安装Windo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="美化windows终端">
+<meta property="og:url" content="https://sonna.cn/2022/03/20/%E7%BE%8E%E5%8C%96windows%E7%BB%88%E7%AB%AF/index.html">
+<meta property="og:site_name" content="雪天困不住的大孩子">
+<meta property="og:description" content="序言：效果展示 终端是程序员日常会使用到的工具。 windows的cmd可以用，但界面也不美观，让人没有欲望使用 所以我就找到了 Windows Terminal 这一软件，可以管理使用多个shell 利用自带的设置就可以轻松美化界面 而且我还会教程PowerShell Core，以及oh-my-posh美化插件，(没错是不是和mac上的zsh有点相似)  步骤1：下载 &amp; 安装Windo">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://npm.elemecdn.com/yanqi1711-picx/20220423/020.1v6op4h7ss2o.webp">
+<meta property="article:published_time" content="2022-03-20T08:57:16.000Z">
+<meta property="article:modified_time" content="2023-09-12T03:45:55.189Z">
+<meta property="article:author" content="yanqi">
+<meta property="article:tag" content="终端">
+<meta property="article:tag" content="美化">
+<meta property="article:tag" content="windows">
+<meta property="article:tag" content="PowerShell">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://npm.elemecdn.com/yanqi1711-picx/20220423/020.1v6op4h7ss2o.webp"><link rel="shortcut icon" href="https://npm.elemecdn.com/yanqi1711-picx/img/kun.webp"><link rel="canonical" href="https://sonna.cn/2022/03/20/%E7%BE%8E%E5%8C%96windows%E7%BB%88%E7%AB%AF/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://npm.elemecdn.com/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/@fancyapps/ui/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: {"appId":"0ZPAR0UJ1S","apiKey":"10c27644e12d4d4d8597754fb959371e","indexName":"hexo","hits":{"per_page":10},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://npm.elemecdn.com/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://npm.elemecdn.com/flickr-justified-gallery/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '美化windows终端',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-09-12 03:45:55'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2"></head><body><!-- hexo injector body_begin start --><script src="/sw-dom.js"></script><!-- hexo injector body_begin end --><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><div class="loading-img"></div><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+document.addEventListener('pjax:send', () => {
+  Pace.restart()
+})
+</script><link rel="stylesheet" href="/css/progress_bar.css"/><script src="https://npm.elemecdn.com/pace-js/pace.min.js"></script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/yanqi1711-picx@1.0.11/img/me.webp" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">26</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">25</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img fixed" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="雪天困不住的大孩子"><span class="site-name">雪天困不住的大孩子</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">美化windows终端</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-03-20T08:57:16.000Z" title="发表于 2022-03-20 08:57:16">2022-03-20</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-09-12T03:45:55.189Z" title="更新于 2023-09-12 03:45:55">2023-09-12</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a></span></div><div class="meta-secondline"></div></div></div><article class="post-content" id="article-container"><h2 id="序言：效果展示"><a href="#序言：效果展示" class="headerlink" title="序言：效果展示"></a>序言：效果展示</h2><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/yanqi1711-picx/20220423/image-20220402152218264.75clcd2odrw0.webp" alt="image-20220402152218264"></p>
+<p>终端是程序员日常会使用到的工具。</p>
+<p>windows的cmd可以用，但界面也不美观，让人没有欲望使用</p>
+<p>所以我就找到了 Windows Terminal 这一软件，可以管理使用多个shell</p>
+<p>利用自带的设置就可以轻松美化界面</p>
+<p>而且我还会教程PowerShell Core，以及oh-my-posh美化插件，(没错是不是和mac上的zsh有点相似)</p>
+<hr>
+<h2 id="步骤1：下载-amp-安装Windows-Terminal"><a href="#步骤1：下载-amp-安装Windows-Terminal" class="headerlink" title="步骤1：下载 &amp; 安装Windows Terminal"></a>步骤1：下载 &amp; 安装Windows Terminal</h2><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/yanqi1711-picx/20220423/image-20220402154003490.2x563oc2eoe0.webp" alt="image-20220402154003490"></p>
+<blockquote>
+<p>必须运行 Windows 1903 (build&gt;= 10.0.18362.0) 或更高版本才能运行 Windows 终端</p>
+</blockquote>
+<p>首先需要解决的是你的系统环境问题。如果你有经常升级系统的话，这个问题就不会给你造成影响。<br>如果你的 Windows 版本不够的话，可以使用 <a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-cn/software-download/windows10">windows 易升</a>进行升级，这里不进行赘述。<br>打开你的 windows 应用商店（Microsoft Store）搜索 Windows Terminal 进行下载 &amp; 安装。</p>
+<p>安装完成后，在”C:\Program Files\WindowsApps\Microsoft.WindowsTerminal_版本号_x64__xxxxxxxx” 目录下，打开”WindowsTerminal.exe” 即可打开软件。</p>
+<p>右键创建快捷方式到桌面，或固定到任务栏中。</p>
+<hr>
+<h2 id="步骤-2：下载-amp-安装-PowerShell-Core"><a href="#步骤-2：下载-amp-安装-PowerShell-Core" class="headerlink" title="步骤 2：下载 &amp; 安装 PowerShell Core"></a>步骤 2：下载 &amp; 安装 PowerShell Core</h2><p>为了获取更佳的 PowerShell 体验，需下载 PowerShell core 版本。<br>你可以<a target="_blank" rel="noopener" href="https://github.com/PowerShell/PowerShell/releases/download/v7.1.0-preview.6/PowerShell-7.1.0-preview.6-win-x64.msi">点击直接下载</a>。<br>你也可以<a target="_blank" rel="noopener" href="https://github.com/PowerShell/PowerShell/releases">前往 github 查看最新版本</a>，并下载。<br>安装完成后，在”C:\Program Files\PowerShell\7-preview” 目录下，打开”pwsh.exe” 即可打开软件。</p>
+<hr>
+<h2 id="步骤-3：配置-PowerShell-Core"><a href="#步骤-3：配置-PowerShell-Core" class="headerlink" title="步骤 3：配置 PowerShell Core"></a>步骤 3：配置 PowerShell Core</h2><h3 id="①-安装-powershell-插件"><a href="#①-安装-powershell-插件" class="headerlink" title="① 安装 powershell 插件"></a>① 安装 powershell 插件</h3><p>打开刚装好的新版 powershell，逐行输入以下三行命令，等待安装（可能会有点慢）。</p>
+<p>后面两个包的来源可能不受系统信任，不用管它，如果让你选择是否信任，直接输入 Y 即可。</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Install-Module</span> <span class="literal">-Name</span> PSReadLine <span class="literal">-AllowPrerelease</span> <span class="literal">-Force</span></span><br><span class="line"><span class="built_in">Install-Module</span> posh<span class="literal">-git</span> <span class="literal">-Scope</span> CurrentUser</span><br><span class="line"><span class="built_in">Install-Module</span> <span class="built_in">oh</span><span class="literal">-my-posh</span> <span class="literal">-Scope</span> CurrentUser</span><br><span class="line"></span><br><span class="line"><span class="comment"># 1. 安装 PSReadline 包，该插件可以让命令行很好用</span></span><br><span class="line"><span class="comment"># 2. 安装 posh-git 包，让你的 git 更好用</span></span><br><span class="line"><span class="comment"># 3. 安装 oh-my-posh 包，让你的命令行更酷炫、优雅</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="②-设置-powershell-启动参数"><a href="#②-设置-powershell-启动参数" class="headerlink" title="② 设置 powershell 启动参数"></a>② 设置 powershell 启动参数</h3><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/137595941">《Windows Terminal 完美配置 PowerShell 7.1》</a></p>
+<p>在powershell窗口输入下面代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">notepad.exe $Profile</span><br></pre></td></tr></table></figure>
+
+<p>会打开启动文件</p>
+<p>在里面写入以下代码，保存并关闭</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br></pre></td><td class="code"><pre><span class="line">#------------------------------- Import Modules BEGIN -------------------------------</span><br><span class="line"># 引入 posh-git</span><br><span class="line">Import-Module posh-git</span><br><span class="line"></span><br><span class="line"># 引入 oh-my-posh</span><br><span class="line">Import-Module oh-my-posh</span><br><span class="line"></span><br><span class="line"># 引入 ps-read-line</span><br><span class="line">Import-Module PSReadLine</span><br><span class="line"></span><br><span class="line"># 设置 PowerShell 主题</span><br><span class="line">Set-PoshPrompt -Theme Sorin</span><br><span class="line">#------------------------------- Import Modules END   -------------------------------</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#-------------------------------  Set Hot-keys BEGIN  -------------------------------</span><br><span class="line"># 设置预测文本来源为历史记录</span><br><span class="line">Set-PSReadLineOption -PredictionSource History</span><br><span class="line"></span><br><span class="line"># 每次回溯输入历史，光标定位于输入内容末尾</span><br><span class="line">Set-PSReadLineOption -HistorySearchCursorMovesToEnd</span><br><span class="line"></span><br><span class="line"># 设置 Tab 为菜单补全和 Intellisense</span><br><span class="line">Set-PSReadLineKeyHandler -Key &quot;Tab&quot; -Function MenuComplete</span><br><span class="line"></span><br><span class="line"># 设置 Ctrl+d 为退出 PowerShell</span><br><span class="line">Set-PSReadlineKeyHandler -Key &quot;Ctrl+d&quot; -Function ViExit</span><br><span class="line"></span><br><span class="line"># 设置 Ctrl+z 为撤销</span><br><span class="line">Set-PSReadLineKeyHandler -Key &quot;Ctrl+z&quot; -Function Undo</span><br><span class="line"></span><br><span class="line"># 设置向上键为后向搜索历史记录</span><br><span class="line">Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward</span><br><span class="line"></span><br><span class="line"># 设置向下键为前向搜索历史纪录</span><br><span class="line">Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward</span><br><span class="line">#-------------------------------  Set Hot-keys END    -------------------------------</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#-------------------------------    Functions BEGIN   -------------------------------</span><br><span class="line"># Python 直接执行</span><br><span class="line">$env:PATHEXT += &quot;;.py&quot;</span><br><span class="line"></span><br><span class="line"># 更新系统组件</span><br><span class="line">function Update-Packages &#123;</span><br><span class="line">	# update pip</span><br><span class="line">	Write-Host &quot;Step 1: 更新 pip&quot; -ForegroundColor Magenta -BackgroundColor Cyan</span><br><span class="line">	$a = pip list --outdated</span><br><span class="line">	$num_package = $a.Length - 2</span><br><span class="line">	for ($i = 0; $i -lt $num_package; $i++) &#123;</span><br><span class="line">		$tmp = ($a[2 + $i].Split(&quot; &quot;))[0]</span><br><span class="line">		pip install -U $tmp</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	# update TeX Live</span><br><span class="line">	$CurrentYear = Get-Date -Format yyyy</span><br><span class="line">	Write-Host &quot;Step 2: 更新 TeX Live&quot; $CurrentYear -ForegroundColor Magenta -BackgroundColor Cyan</span><br><span class="line">	tlmgr update --self</span><br><span class="line">	tlmgr update --all</span><br><span class="line"></span><br><span class="line">	# update Chocolotey</span><br><span class="line">	Write-Host &quot;Step 3: 更新 Chocolatey&quot; -ForegroundColor Magenta -BackgroundColor Cyan</span><br><span class="line">	choco outdated</span><br><span class="line">&#125;</span><br><span class="line">#-------------------------------    Functions END     -------------------------------</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#-------------------------------   Set Alias BEGIN    -------------------------------</span><br><span class="line"># 1. 编译函数 make</span><br><span class="line">function MakeThings &#123;</span><br><span class="line">	nmake.exe $args -nologo</span><br><span class="line">&#125;</span><br><span class="line">Set-Alias -Name make -Value MakeThings</span><br><span class="line"></span><br><span class="line"># 2. 更新系统 os-update</span><br><span class="line">Set-Alias -Name os-update -Value Update-Packages</span><br><span class="line"></span><br><span class="line"># 3. 查看目录 ls &amp; ll</span><br><span class="line">function ListDirectory &#123;</span><br><span class="line">	(Get-ChildItem).Name</span><br><span class="line">	Write-Host(&quot;&quot;)</span><br><span class="line">&#125;</span><br><span class="line">Set-Alias -Name ls -Value ListDirectory</span><br><span class="line">Set-Alias -Name ll -Value Get-ChildItem</span><br><span class="line"></span><br><span class="line"># 4. 打开当前工作目录</span><br><span class="line">function OpenCurrentFolder &#123;</span><br><span class="line">	param</span><br><span class="line">	(</span><br><span class="line">		# 输入要打开的路径</span><br><span class="line">		# 用法示例：open C:\</span><br><span class="line">		# 默认路径：当前工作文件夹</span><br><span class="line">		$Path = &#x27;.&#x27;</span><br><span class="line">	)</span><br><span class="line">	Invoke-Item $Path</span><br><span class="line">&#125;</span><br><span class="line">Set-Alias -Name open -Value OpenCurrentFolder</span><br><span class="line">#-------------------------------    Set Alias END     -------------------------------</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#-------------------------------   Set Network BEGIN    -------------------------------</span><br><span class="line"># 1. 获取所有 Network Interface</span><br><span class="line">function Get-AllNic &#123;</span><br><span class="line">	Get-NetAdapter | Sort-Object -Property MacAddress</span><br><span class="line">&#125;</span><br><span class="line">Set-Alias -Name getnic -Value Get-AllNic</span><br><span class="line"></span><br><span class="line"># 2. 获取 IPv4 关键路由</span><br><span class="line">function Get-IPv4Routes &#123;</span><br><span class="line">	Get-NetRoute -AddressFamily IPv4 | Where-Object -FilterScript &#123;$_.NextHop -ne &#x27;0.0.0.0&#x27;&#125;</span><br><span class="line">&#125;</span><br><span class="line">Set-Alias -Name getip -Value Get-IPv4Routes</span><br><span class="line"></span><br><span class="line"># 3. 获取 IPv6 关键路由</span><br><span class="line">function Get-IPv6Routes &#123;</span><br><span class="line">	Get-NetRoute -AddressFamily IPv6 | Where-Object -FilterScript &#123;$_.NextHop -ne &#x27;::&#x27;&#125;</span><br><span class="line">&#125;</span><br><span class="line">Set-Alias -Name getip6 -Value Get-IPv6Routes</span><br><span class="line">#-------------------------------    Set Network END     -------------------------------</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="步骤4：配置Windows-Terminal"><a href="#步骤4：配置Windows-Terminal" class="headerlink" title="步骤4：配置Windows Terminal"></a>步骤4：配置Windows Terminal</h2><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/yanqi1711-picx/20220423/image-20220402155024702.5uvl9wn6lqg0.webp" alt="image-20220402155024702"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/yanqi1711-picx/20220423/image-20220402155350665.2wq7b1z3o0e0.webp" alt="image-20220402155350665"></p>
+<p>在”C:\Program Files\PowerShell\7-preview” 目录下找到pwsh.exe</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/yanqi1711-picx/20220423/image-20220402155521158.16b95p7x2s1s.webp" alt="image-20220402155521158"></p>
+<p>可以直接配置图标，背景，字体等等</p>
+<h3 id="推荐字体"><a href="#推荐字体" class="headerlink" title="推荐字体"></a>推荐字体</h3><p>推荐使用<code>FiraCode</code>，下载链接<a target="_blank" rel="noopener" href="https://github.com/tonsky/FiraCode/releases">戳这里</a>。</p>
+<p>解压后选择其中一个<code>ttf</code>安装即可，我使用的是这个：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/yanqi1711-picx/20220423/image-20220402160127147.3gsxfogzuns0.webp" alt="image-20220402160127147"></p>
+<h3 id="更改默认"><a href="#更改默认" class="headerlink" title="更改默认"></a>更改默认</h3><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/yanqi1711-picx/20220423/image-20220402160307863.4f36avi2rxy0.webp" alt="image-20220402160307863"></p>
+<h3 id="去掉PowerShell-Core的更新提示"><a href="#去掉PowerShell-Core的更新提示" class="headerlink" title="去掉PowerShell Core的更新提示"></a>去掉PowerShell Core的更新提示</h3><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/yanqi1711-picx/20220423/image-20220402160408689.744czdegl20.webp" alt="image-20220402160408689"></p>
+<p>ctrl+f 找到 pwsh.exe 添加–nologo启动参数来去掉这个信息提示</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">–nologo</span><br></pre></td></tr></table></figure>
+
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/yanqi1711-picx/20220423/image-20220402160515252.2sors1n9u3y0.webp" alt="image-20220402160515252" style="zoom:50%;" />
+
+<hr>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>之前用 mac 的时候鼓捣的是 zsh 感觉非常不错，现在换到 win 也想体验 zsh 那种舒服的感觉所以有了这篇教程，希望对大家有帮助</p>
+<p>最后附上一张背景图</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/yanqi1711-picx/20220423/102.127nnaabhexs.webp" alt="102"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://sonna.cn">yanqi</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://sonna.cn/2022/03/20/%E7%BE%8E%E5%8C%96windows%E7%BB%88%E7%AB%AF/">https://sonna.cn/2022/03/20/%E7%BE%8E%E5%8C%96windows%E7%BB%88%E7%AB%AF/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://sonna.cn" target="_blank">雪天困不住的大孩子</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%BB%88%E7%AB%AF/">终端</a><a class="post-meta__tags" href="/tags/%E7%BE%8E%E5%8C%96/">美化</a><a class="post-meta__tags" href="/tags/windows/">windows</a><a class="post-meta__tags" href="/tags/PowerShell/">PowerShell</a></div><div class="post_share"></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/03/20/%E7%AC%AC%E4%BA%8C%E8%8A%82/" title="第二节"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/yanqi1711-picx/20220423/036.666qmkeh3n80.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">第二节</div></div></a></div><div class="next-post pull-right"><a href="/2022/03/15/%E7%AC%AC%E4%B8%80%E8%8A%82/" title="第一节"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/yanqi1711-picx/20220423/112.jinldrg0fg0.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">第一节</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/yanqi1711-picx@1.0.11/img/me.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">yanqi</div><div class="author-info__description">梦想去做一名全栈工程师</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">26</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">25</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/yanqi17118357"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">人活在世上不就是为了樱岛麻衣吗？</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%8F%E8%A8%80%EF%BC%9A%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA"><span class="toc-number">1.</span> <span class="toc-text">序言：效果展示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A41%EF%BC%9A%E4%B8%8B%E8%BD%BD-amp-%E5%AE%89%E8%A3%85Windows-Terminal"><span class="toc-number">2.</span> <span class="toc-text">步骤1：下载 &amp; 安装Windows Terminal</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4-2%EF%BC%9A%E4%B8%8B%E8%BD%BD-amp-%E5%AE%89%E8%A3%85-PowerShell-Core"><span class="toc-number">3.</span> <span class="toc-text">步骤 2：下载 &amp; 安装 PowerShell Core</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4-3%EF%BC%9A%E9%85%8D%E7%BD%AE-PowerShell-Core"><span class="toc-number">4.</span> <span class="toc-text">步骤 3：配置 PowerShell Core</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%91%A0-%E5%AE%89%E8%A3%85-powershell-%E6%8F%92%E4%BB%B6"><span class="toc-number">4.1.</span> <span class="toc-text">① 安装 powershell 插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%91%A1-%E8%AE%BE%E7%BD%AE-powershell-%E5%90%AF%E5%8A%A8%E5%8F%82%E6%95%B0"><span class="toc-number">4.2.</span> <span class="toc-text">② 设置 powershell 启动参数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A44%EF%BC%9A%E9%85%8D%E7%BD%AEWindows-Terminal"><span class="toc-number">5.</span> <span class="toc-text">步骤4：配置Windows Terminal</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A8%E8%8D%90%E5%AD%97%E4%BD%93"><span class="toc-number">5.1.</span> <span class="toc-text">推荐字体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9B%B4%E6%94%B9%E9%BB%98%E8%AE%A4"><span class="toc-number">5.2.</span> <span class="toc-text">更改默认</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%BB%E6%8E%89PowerShell-Core%E7%9A%84%E6%9B%B4%E6%96%B0%E6%8F%90%E7%A4%BA"><span class="toc-number">5.3.</span> <span class="toc-text">去掉PowerShell Core的更新提示</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">6.</span> <span class="toc-text">总结</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/09/12/%E6%8C%82%E8%BD%BDmmcblk1%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA/" title="挂载mmcblk1磁盘分区"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/09/12/m4lSkpJeV18jMhy.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="挂载mmcblk1磁盘分区"/></a><div class="content"><a class="title" href="/2023/09/12/%E6%8C%82%E8%BD%BDmmcblk1%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA/" title="挂载mmcblk1磁盘分区">挂载mmcblk1磁盘分区</a><time datetime="2023-09-12T10:57:16.000Z" title="发表于 2023-09-12 10:57:16">2023-09-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/13/Java%E5%9F%BA%E7%A1%80%E5%AE%B9%E5%99%A8/" title="Java基础容器"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/yanqi1711-picx/img/244.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java基础容器"/></a><div class="content"><a class="title" href="/2022/07/13/Java%E5%9F%BA%E7%A1%80%E5%AE%B9%E5%99%A8/" title="Java基础容器">Java基础容器</a><time datetime="2022-07-13T00:46:14.000Z" title="发表于 2022-07-13 00:46:14">2022-07-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/05/Spring5%E6%A1%86%E6%9E%B6/" title="Spring5"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/yanqi1711-picx/img/234.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Spring5"/></a><div class="content"><a class="title" href="/2022/07/05/Spring5%E6%A1%86%E6%9E%B6/" title="Spring5">Spring5</a><time datetime="2022-07-05T08:57:16.000Z" title="发表于 2022-07-05 08:57:16">2022-07-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/04/CycleGAN/" title="图片场景转换-基于CycleGAN"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/yanqi1711-picx/img/206.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="图片场景转换-基于CycleGAN"/></a><div class="content"><a class="title" href="/2022/07/04/CycleGAN/" title="图片场景转换-基于CycleGAN">图片场景转换-基于CycleGAN</a><time datetime="2022-07-04T08:57:16.000Z" title="发表于 2022-07-04 08:57:16">2022-07-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/06/20/%E7%A7%8D%E6%A0%91%E7%9A%84%E7%94%B7%E4%BA%BA/" title="种树的男人"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/yanqi1711-picx/pic/1.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="种树的男人"/></a><div class="content"><a class="title" href="/2022/06/20/%E7%A7%8D%E6%A0%91%E7%9A%84%E7%94%B7%E4%BA%BA/" title="种树的男人">种树的男人</a><time datetime="2022-06-20T08:57:16.000Z" title="发表于 2022-06-20 08:57:16">2022-06-20</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2023 By yanqi</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://npm.elemecdn.com/@fancyapps/ui/dist/fancybox/fancybox.umd.js"></script><script src="https://npm.elemecdn.com/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://npm.elemecdn.com/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://npm.elemecdn.com/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (true){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"></div><div class="aplayer no-destroy" data-id="7426255953" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="false" muted></div><link rel="stylesheet" href="https://npm.elemecdn.com/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://npm.elemecdn.com/aplayer/dist/APlayer.min.js"></script><script src="https://npm.elemecdn.com/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script src="https://npm.elemecdn.com/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div><script src="https://npm.elemecdn.com/algoliasearch/dist/algoliasearch-lite.umd.js"></script><script src="https://npm.elemecdn.com/instantsearch.js/dist/instantsearch.production.min.js"></script><script src="/js/search/algolia.js"></script></div></div></body></html>
